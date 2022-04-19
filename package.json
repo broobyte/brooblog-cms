@@ -1,0 +1,23 @@
+{
+  "name": "brooblog-cms",
+  "version": "1.0.0",
+  "description": "A CMS system to create, edit and delete articles for brooblog.co.uk",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Brook Nash",
+  "license": "ISC",
+  "dependencies": {
+    "dompurify": "^2.3.6",
+    "dotenv": "^16.0.0",
+    "jsdom": "^19.0.0",
+    "marked": "^4.0.14",
+    "mongoose": "^6.3.0",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "electron": "^18.0.4"
+  }
+}

@@ -1,0 +1,310 @@
+/*--------
+    GLOBAL
+----------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+:root {
+  --BGprimaryDark: rgb(31, 31, 31);
+  --BGsecondaryDark: rgb(63, 63, 63);
+  --BGprimaryLight: rgb(241, 243, 245);
+  --BGsecondaryLight: white;
+  --Textdark: white;
+  --Textlight: rgb(31, 31, 31);
+  --Disabled: rgb(150, 150, 150);
+  --Tertiary: indianred;
+  --Boxshadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+}
+
+body {
+  position: relative;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--BGprimaryDark);
+  color: var(--Textdark);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+blockquote {
+  width: 50%;
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+blockquote > p {
+  padding-left: 5px;
+  border-left: 2px solid var(--Tertiary);
+  font-size: 12px;
+}
+
+ol {
+  list-style-type: lower-alpha;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+pre {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--BGprimaryDark);
+  border-radius: 10px;
+  box-shadow: var(--Boxshadow);
+  overflow: auto;
+}
+
+pre::-webkit-scrollbar {
+  height: 5px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: var(--Disabled);
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: var(--BGprimaryDark);
+}
+
+code {
+  font-size: 14px !important;
+  font-family: "Poppins" !important;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid var(--Disabled);
+}
+
+a {
+  color: var(--Tertiary);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  height: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 50%;
+  margin-left: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+/*-----------
+    SELECTORS
+-------------*/
+
+/* titlebar */
+
+#titlebar {
+  position: absolute;
+  width: 90vw;
+  top: 5px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+#tbReturn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Tertiary);
+  text-decoration: none;
+}
+
+#tbReturn > i {
+  font-size: 20px;
+}
+
+#tbTitle {
+  width: 100%;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-app-region: drag;
+}
+
+/* input */
+
+#input {
+  position: absolute;
+  height: 90vh;
+  width: 45vw;
+  top: 50px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#inputTitle {
+  text-align: center;
+  background: none;
+  color: var(--Textdark);
+  border: none;
+  font-size: 48px;
+  font-weight: 200;
+}
+
+#inputDescription {
+  text-align: center;
+  background: none;
+  color: var(--Textdark);
+  border: none;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#inputTitle:focus,
+#inputDescription:focus {
+  outline: 1px solid var(--BGsecondaryDark);
+}
+
+#inputContent {
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--BGsecondaryDark);
+  color: var(--Textdark);
+  border: none;
+  box-shadow: var(--Boxshadow);
+  gap: 20px;
+  resize: none;
+}
+
+#inputContent:focus {
+  outline: none;
+}
+
+#inputSave {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  bottom: -35px;
+  right: 0;
+  background-color: var(--Tertiary);
+  color: var(--Textdark);
+  border: none;
+  font-size: 20px;
+  font-weight: 300;
+  box-shadow: var(--Boxshadow);
+  cursor: pointer;
+}
+
+#inputSave:hover {
+  filter: brightness(80%);
+}
+
+/* output */
+
+#output {
+  position: absolute;
+  height: 90vh;
+  width: 45vw;
+  top: 50px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#outputTitle {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 200;
+}
+
+#outputDescription {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#outputContent {
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: var(--BGsecondaryDark);
+  box-shadow: var(--Boxshadow);
+  gap: 20px;
+  overflow: auto;
+}
+
+#outputContent * {
+  margin-bottom: 20px;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--Disabled);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--BGprimaryDark);
+}
